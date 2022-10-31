@@ -24,9 +24,10 @@ function calculateClicked() {
   const width = parseFloat(document.getElementById("Width").value)
   const height = parseFloat(document.getElementById("Height").value)
 
-// process
-  const volume = length * width * height / 3
+  // process
+  const volume = (length * width * height) / 3
 
-// output
-  document.getElementById("Volume").innerHTML = "The volume of this Pyramid is " + volume.toFixed(2) + "cm³."
+  // output
+  document.getElementById("Volume").innerHTML =
+    "The volume of this Pyramid is " + volume.toFixed(2) + "cm³."
 }
