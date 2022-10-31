@@ -1,7 +1,7 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2020 Julienka Sohal All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Julienka Sohal
+// Created on: Oct 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -10,14 +10,23 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS20-Unit3-02-JS/sw.js", {
+    scope: "/ICS20-Unit3-02-JS/",
   })
 }
 
 /**
- * This function displays an alert.
+ * calculates the volume of the pyramid
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+// input
+function calculateClicked() {
+  const length = parseFloat(document.getElementById("Length").value)
+  const width = parseFloat(document.getElementById("Width").value)
+  const height = parseFloat(document.getElementById("Height").value)
+
+// process
+  const volume = length * width * height / 3
+
+// output
+  document.getElementById("Volume").innerHTML = "The volume of this Pyramid is " + volume.toFixed(2) + "cm³."
 }
